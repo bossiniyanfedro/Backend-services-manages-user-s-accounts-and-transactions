@@ -1,0 +1,25 @@
+# docker-compose.yml
+
+version: '3.8'
+
+services:
+  account-manager:
+    build:
+      context: ./account-manager
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      # Add environment variables if needed
+
+  payment-manager:
+    build:
+      context: ./payment-manager
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+    environment:
+      # Add environment variables if needed
+
+  # Add other services if needed
+
